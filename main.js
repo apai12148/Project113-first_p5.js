@@ -3,18 +3,24 @@ function preload(){
 }
 
 function setup(){
-    canvas = createCanvas(300,300);
+    canvas = createCanvas(640,480);
+    canvas.position(150,150)
     canvas.center();
-
+    video = createCapture(VIDEO);
+    video.hide();
 }
 
 function draw(){
-    rect(30,20,55,55,20)
-    describe('white rect with black outline in top-right of canvas');
-    rect(30,20,55,55,20)
-    describe('white rect with black outline in top-left of canvas');
-    rect(30,20,55,55,20)
-    describe('white rect with black outline in bottom-right of canvas');
-    rect(30,20,55,55,20)
-    describe('white rect with black outline in bottom-left of canvas');
+    fill("blue")
+    stroke("red")
+    circle(50,50,80)
+    circle(50,430,80)
+    circle(590,50,80)
+    circle(590,430,80)
+    rect(90,40,460,20)
+    rect(90,420,460,20)
+    rect(40,90,20,300)
+    rect(580,90,20,300)
+
+    image(video,230,150,220,200);
 }
